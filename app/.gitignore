@@ -1,0 +1,7 @@
+
+# Sparkle signing keys (NEVER commit these!)
+.sparkle-keys/
+
+# Build artifacts
+build/
+releases/

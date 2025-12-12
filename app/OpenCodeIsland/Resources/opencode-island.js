@@ -1,0 +1,1 @@
+../../../plugin/dist/opencode-island.js

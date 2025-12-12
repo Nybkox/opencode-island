@@ -1,0 +1,35 @@
+{
+	"name": "@opencodeisland/plugin",
+	"version": "1.0.0",
+	"description": "OpenCode Island plugin for real-time session monitoring and permission handling",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"build:plugin": "bun build ./src/index.ts --outfile ./dist/opencode-island.js --target bun --external @opencode-ai/plugin",
+		"build:backend": "bun build ./src/backend/index.ts --outfile ./dist/backend.js --target bun",
+		"build": "bun run build:plugin && bun run build:backend",
+		"backend": "bun run ./src/backend/index.ts",
+		"format": "biome format --write",
+		"format:check": "biome format",
+		"lint": "biome lint",
+		"lint:fix": "biome lint --write",
+		"dev": "bun run build --watch"
+	},
+	"keywords": [
+		"opencode",
+		"plugin",
+		"island"
+	],
+	"author": "OpenCode Island",
+	"license": "MIT",
+	"dependencies": {
+		"@opencode-ai/plugin": "^1.0.150",
+		"@opencode-ai/sdk": "^1.0.150"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.8",
+		"@types/bun": "latest",
+		"typescript": "^5.0.0"
+	}
+}
