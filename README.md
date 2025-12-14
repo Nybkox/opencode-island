@@ -22,9 +22,16 @@ A macOS menu bar app that brings Dynamic Island-style notifications to [OpenCode
 
 ## Install
 
-Download the latest release from [GitHub Releases](https://github.com/Nybkox/opencode-island/releases/latest).
+1. Download the latest DMG from [GitHub Releases](https://github.com/Nybkox/opencode-island/releases/latest)
+2. Open the DMG and drag OpenCode Island to Applications
+3. **First launch:** Run this to bypass Gatekeeper (app is not notarized):
+   ```bash
+   xattr -d com.apple.quarantine /Applications/OpenCode\ Island.app
+   ```
 
-Or build from source:
+> Alternatively: System Settings → Privacy & Security → "Open Anyway" after the first blocked launch attempt.
+
+### Build from source
 
 ```bash
 # Build plugin first
